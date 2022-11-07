@@ -7,19 +7,19 @@ const Header = () => {
     <div>
       <nav className="bg-transparent border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-          <a href="https://flowbite.com" className="flex items-center">
+          <button>
             <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
               TutorBD
             </span>
-          </a>
+          </button>
           <div className="flex items-center">
             <Link to={"/login"}>
-              <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium text-blue-900 dark:text-blue-500 hover:bg-red-500 hover:text-white">
+              <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium dark:text-blue-500 hover:bg-red-500 text-white">
                 Login
               </Button>
             </Link>
             <Link to={"/registration"}>
-              <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium text-blue-900 dark:text-blue-500 hover:bg-red-500 hover:text-white">
+              <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium dark:text-blue-500 hover:bg-red-500 text-white">
                 Registration
               </Button>
             </Link>
