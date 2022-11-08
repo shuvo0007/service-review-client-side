@@ -14,7 +14,7 @@ const Main = () => {
           .slice(-3)
           .reverse()
           .map((category) => (
-            <CategoryCards
+            <CategoryCards 
               key={category.id}
               category={category}
             ></CategoryCards>
