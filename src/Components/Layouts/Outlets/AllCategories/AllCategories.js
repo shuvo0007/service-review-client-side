@@ -1,7 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../../../../Hooks/useTitle";
-import AllCards from "./AllCards";
+import CategoryCards from "../Main/CategoryCards";
 
 const AllCategories = () => {
   useTitle("Category");
@@ -13,7 +13,10 @@ const AllCategories = () => {
           .slice()
           .reverse()
           .map((category) => (
-            <AllCards key={category.id} category={category}></AllCards>
+            <CategoryCards
+              key={category.id}
+              category={category}
+            ></CategoryCards>
           ))}
       </div>
     </div>
