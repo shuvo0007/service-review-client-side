@@ -8,7 +8,7 @@ const Header = () => {
       <nav className="bg-transparent border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
           <button>
-            <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
+            <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">
               TutorBD
             </span>
           </button>
@@ -29,7 +29,7 @@ const Header = () => {
       <nav className="bg-transparent dark:bg-gray-700">
         <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
           <div className="flex items-center">
-            <ul className="flex flex-row mt-0 mr-6 space-x-8 text-lg font-medium">
+            <ul className="flex flex-row mt-0 mr-6 space-x-8 text-xl font-medium">
               <li>
                 <button
                   className="text-white dark:text-white hover:underline"

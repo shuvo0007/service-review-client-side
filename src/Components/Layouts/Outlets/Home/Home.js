@@ -9,7 +9,6 @@ const Home = () => {
       <Header></Header>
       <hr />
       <Outlet></Outlet>
-      <hr />
       <Footer></Footer>
     </div>
   );
