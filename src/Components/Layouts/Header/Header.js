@@ -1,9 +1,19 @@
 import { Button } from "flowbite-react";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import { FaRegUser } from "react-icons/fa";
 import logo from "../../img/logo.png";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       <nav className="bg-transparent border-gray-200 dark:bg-gray-900">
@@ -17,16 +27,50 @@ const Header = () => {
             </button>
           </Link>
           <div className="flex items-center">
-            <Link to={"/login"}>
-              <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium dark:text-blue-500 hover:bg-red-500 text-white">
-                Login
-              </Button>
-            </Link>
-            <Link to={"/registration"}>
-              <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium dark:text-blue-500 hover:bg-red-500 text-white">
-                Registration
-              </Button>
-            </Link>
+            {user ? (
+              <div className="flex items-center">
+                <p className="m-5 text-xl text-white">{user?.displayName}</p>
+                {user.photoURL ? (
+                  <div
+                    className="tooltip tooltip-bottom"
+                    data-tip={user?.displayName}
+                  >
+                    <img
+                      className="rounded-full w-16"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="tooltip tooltip-bottom"
+                    data-tip={user?.displayName}
+                  >
+                    <FaRegUser className=""></FaRegUser>
+                  </div>
+                )}
+                <button
+                  onClick={handleLogOut}
+                  type="button"
+                  className="mx-5 text-lg text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                  LogOut
+                </button>
+              </div>
+            ) : (
+              <>
+                <Link to={"/login"}>
+                  <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium dark:text-blue-500 hover:bg-red-500 text-white">
+                    Login
+                  </Button>
+                </Link>
+                <Link to={"/registration"}>
+                  <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium dark:text-blue-500 hover:bg-red-500 text-white">
+                    Registration
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </nav>
@@ -43,7 +87,7 @@ const Header = () => {
                     Home
                   </button>
                 </Link>
-              </li> 
+              </li>
               <li>
                 <Link to={"/allCategories"}>
                   <button className="text-white dark:text-white hover:underline">
