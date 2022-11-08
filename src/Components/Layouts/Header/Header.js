@@ -31,17 +31,21 @@ const Header = () => {
           <div className="flex items-center">
             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-xl font-medium">
               <li>
-                <button
-                  className="text-white dark:text-white hover:underline"
-                  aria-current="page"
-                >
-                  Home
-                </button>
+                <Link to={"/"}>
+                  <button
+                    className="text-white dark:text-white hover:underline"
+                    aria-current="page"
+                  >
+                    Home
+                  </button>
+                </Link>
               </li>
               <li>
+                <Link to={'/allCategories'}>
                 <button className="text-white dark:text-white hover:underline">
-                  Company
+                  All Categories
                 </button>
+                </Link>
               </li>
               <li>
                 <button className="text-white dark:text-white hover:underline">

@@ -1,6 +1,6 @@
 import React from "react";
 import { SlArrowRight } from "react-icons/sl";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import CategoryCards from "./CategoryCards";
 
 const Main = () => {
@@ -18,11 +18,16 @@ const Main = () => {
             ></CategoryCards>
           ))}
       </div>
-      <div className="flex justify-center">
-        <button className="text-white text-xl border-2 border-blue-600 p-5 rounded-xl flex ">
-          See All <SlArrowRight size={25} />
-        </button>
-      </div>
+      <Link to={"/allCategories"}>
+        <div className="flex justify-center m-5">
+          <button className="text-white text-xl border-2 border-blue-600 p-5 rounded-xl flex ">
+            See All
+            <span className="pl-5 pt-1">
+              <SlArrowRight size={20} />
+            </span>
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };
