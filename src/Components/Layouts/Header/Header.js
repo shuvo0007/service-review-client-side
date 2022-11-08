@@ -31,8 +31,8 @@ const Header = () => {
         </div>
       </nav>
       <nav className="bg-transparent dark:bg-gray-700">
-        <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
-          <div className="flex items-center">
+        <div className="pb-3 px-4 mx-auto max-w-screen-xl md:px-6">
+          <div className="flex items-center ">
             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-xl font-medium">
               <li>
                 <Link to={"/"}>
@@ -43,7 +43,7 @@ const Header = () => {
                     Home
                   </button>
                 </Link>
-              </li>
+              </li> 
               <li>
                 <Link to={"/allCategories"}>
                   <button className="text-white dark:text-white hover:underline">
@@ -53,12 +53,12 @@ const Header = () => {
               </li>
               <li>
                 <button className="text-white dark:text-white hover:underline">
-                  Team
+                  My reviews
                 </button>
               </li>
               <li>
                 <button className="text-white dark:text-white hover:underline">
-                  Features
+                  Add service
                 </button>
               </li>
             </ul>

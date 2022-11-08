@@ -11,7 +11,7 @@ const CategoryCards = ({ category }) => {
       </p>
       <div>
         <Link to={`/category/${category._id}`}>
-          <button className="text-2xl py-10 rounded bg-blue-800 text-white text-center flex justify-center w-full">
+          <button className="text-2xl py-10 rounded bg-blue-800 text-white text-center flex justify-center items-center w-full">
             {category.name}
             <span className="pl-5 pt-1">
               <SlArrowRight size={20} />
