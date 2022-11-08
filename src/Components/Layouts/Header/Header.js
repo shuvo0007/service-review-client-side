@@ -26,10 +26,50 @@ const Header = () => {
               </span>
             </button>
           </Link>
+          <nav className="bg-transparent dark:bg-gray-700">
+            <div className="pb-3 px-4 mx-auto max-w-screen-xl md:px-6">
+              <div className="flex items-center ">
+                <ul className="flex flex-row mt-0 mr-6 space-x-8 text-xl font-medium">
+                  <li>
+                    <Link to={"/"}>
+                      <button
+                        className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-lg hover:rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-6 transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110  duration-100"
+                        aria-current="page"
+                      >
+                        Home
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/allCategories"}>
+                      <button className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-lg hover:rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-6 transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110  duration-100">
+                        All Categories
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
           <div className="flex items-center">
             {user ? (
               <div className="flex items-center">
-                <p className="m-5 text-xl text-white">{user?.displayName}</p>
+                <ul className="flex ">
+                  <li>
+                    <Link to={"/reviews"}>
+                      <button className="text-white bg-orange-600 hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-lg hover:rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 m-3 transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110  duration-100">
+                        My reviews
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/addCategory"}>
+                      <button className="text-white bg-orange-600 hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-lg hover:rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 m-3 transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110  duration-100">
+                        Add Category
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
                 {user.photoURL ? (
                   <img
                     className="rounded-full w-16"
@@ -37,8 +77,11 @@ const Header = () => {
                     alt=""
                   />
                 ) : (
-                  <div className="border-2 rounded-full p-3 text-white"><FaRegUser size={30}></FaRegUser></div>
+                  <div className="border-2 rounded-full p-3 text-white">
+                    <FaRegUser size={30}></FaRegUser>
+                  </div>
                 )}
+                <p className="m-5 text-xl text-white">{user?.displayName}</p>
                 <button
                   onClick={handleLogOut}
                   type="button"
@@ -61,41 +104,6 @@ const Header = () => {
                 </Link>
               </>
             )}
-          </div>
-        </div>
-      </nav>
-      <nav className="bg-transparent dark:bg-gray-700">
-        <div className="pb-3 px-4 mx-auto max-w-screen-xl md:px-6">
-          <div className="flex items-center ">
-            <ul className="flex flex-row mt-0 mr-6 space-x-8 text-xl font-medium">
-              <li>
-                <Link to={"/"}>
-                  <button
-                    className="text-white dark:text-white hover:underline"
-                    aria-current="page"
-                  >
-                    Home
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link to={"/allCategories"}>
-                  <button className="text-white dark:text-white hover:underline">
-                    All Categories
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <button className="text-white dark:text-white hover:underline">
-                  My reviews
-                </button>
-              </li>
-              <li>
-                <button className="text-white dark:text-white hover:underline">
-                  Add service
-                </button>
-              </li>
-            </ul>
           </div>
         </div>
       </nav>
