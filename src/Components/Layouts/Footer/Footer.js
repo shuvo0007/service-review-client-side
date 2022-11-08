@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../img/logo.png";
 
 const Footer = () => {
   return (
@@ -8,6 +10,7 @@ const Footer = () => {
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
             <a href="/" class="flex items-center">
+              <img className="w-14 p-2 m-2" src={logo} alt="img" />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 TutorBD
               </span>
