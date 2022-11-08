@@ -10,7 +10,7 @@ const CategoryCards = ({ category }) => {
         {category.details.slice(0, 100) + "..."}
       </p>
       <div>
-        <Link to={`/category/${category.id}`}>
+        <Link to={`/category/${category.card_id}`}>
           <button className="text-2xl py-10 rounded bg-blue-800 text-white text-center flex justify-center w-full">
             {category.name}
             <span className="pl-5 pt-1">

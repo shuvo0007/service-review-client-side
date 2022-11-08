@@ -15,7 +15,7 @@ const Main = () => {
           .reverse()
           .map((category) => (
             <CategoryCards 
-              key={category.id}
+              key={category.card_id}
               category={category}
             ></CategoryCards>
           ))}
