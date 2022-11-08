@@ -31,23 +31,13 @@ const Header = () => {
               <div className="flex items-center">
                 <p className="m-5 text-xl text-white">{user?.displayName}</p>
                 {user.photoURL ? (
-                  <div
-                    className="tooltip tooltip-bottom"
-                    data-tip={user?.displayName}
-                  >
-                    <img
-                      className="rounded-full w-16"
-                      src={user.photoURL}
-                      alt=""
-                    />
-                  </div>
+                  <img
+                    className="rounded-full w-16"
+                    src={user.photoURL}
+                    alt=""
+                  />
                 ) : (
-                  <div
-                    className="tooltip tooltip-bottom"
-                    data-tip={user?.displayName}
-                  >
-                    <FaRegUser className=""></FaRegUser>
-                  </div>
+                  <div className="border-2 rounded-full p-3 text-white"><FaRegUser size={30}></FaRegUser></div>
                 )}
                 <button
                   onClick={handleLogOut}
