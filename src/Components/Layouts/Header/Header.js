@@ -8,12 +8,14 @@ const Header = () => {
     <div>
       <nav className="bg-transparent border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-          <a href="/" className="flex">
-            <img className="w-20 p-2 m-2" src={logo} alt="img" />
-            <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">
-              TutorBD
-            </span>
-          </a>
+          <Link to={"/"}>
+            <button className="flex">
+              <img className="w-20 p-2 m-2" src={logo} alt="img" />
+              <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">
+                TutorBD
+              </span>
+            </button>
+          </Link>
           <div className="flex items-center">
             <Link to={"/login"}>
               <Button className="border-2 border-blue-400 p-2 rounded-lg mx-2 text-base  font-medium dark:text-blue-500 hover:bg-red-500 text-white">
@@ -33,21 +35,21 @@ const Header = () => {
           <div className="flex items-center">
             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-xl font-medium">
               <li>
-
-                  <a href="/"
+                <Link to={"/"}>
+                  <button
                     className="text-white dark:text-white hover:underline"
                     aria-current="page"
                   >
                     Home
-                  </a>
-
+                  </button>
+                </Link>
               </li>
               <li>
-
-                  <a href="/allCategories" className="text-white dark:text-white hover:underline">
+                <Link to={"/allCategories"}>
+                  <button className="text-white dark:text-white hover:underline">
                     All Categories
-                  </a>
-
+                  </button>
+                </Link>
               </li>
               <li>
                 <button className="text-white dark:text-white hover:underline">

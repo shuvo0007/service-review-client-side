@@ -5,7 +5,6 @@ import Header from "../../Header/Header";
 import useTitle from "../../../../Hooks/useTitle";
 
 const Home = () => {
-  useTitle('Home');
 
   return (
     <div>
