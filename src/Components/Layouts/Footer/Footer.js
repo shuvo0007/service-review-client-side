@@ -9,12 +9,14 @@ const Footer = () => {
       <footer class="mx-40 w-10/12 p-4 bg-transparent sm:p-6 dark:bg-gray-900">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-            <a href="/" class="flex items-center">
-              <img className="w-14 p-2 m-2" src={logo} alt="img" />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                TutorBD
-              </span>
-            </a>
+            <Link to={"/"}>
+              <button class="flex items-center">
+                <img className="w-14 p-2 m-2" src={logo} alt="img" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                  TutorBD
+                </span>
+              </button>
+            </Link>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
