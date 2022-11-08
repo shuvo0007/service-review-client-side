@@ -10,6 +10,7 @@ export const routes = createBrowserRouter([
       {
         path: "/",
         element: <Main></Main>,
+        loader: () => fetch(`http://localhost:5000/category`),
       },
     ],
   },
