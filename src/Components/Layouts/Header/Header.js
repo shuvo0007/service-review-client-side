@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <div>
       <nav className="bg-transparent border-gray-200 dark:bg-gray-900">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+        <div className="flex flex-wrap justify-between items-center mx-20 px-4 md:px-6 py-2.5">
           <Link to={"/"}>
             <button className="flex">
               <img className="w-20 p-2 m-2" src={logo} alt="img" />

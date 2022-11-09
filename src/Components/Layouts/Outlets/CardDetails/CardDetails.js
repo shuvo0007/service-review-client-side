@@ -32,7 +32,7 @@ const CardDetails = () => {
           </p>
         </div>
       </div>
-      <GiveReview card_id={card._id}></GiveReview>
+      <GiveReview card_id={card._id} card_name={card.name}></GiveReview> 
 
       {allReviews
         .slice()

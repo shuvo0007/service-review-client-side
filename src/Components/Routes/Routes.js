@@ -8,6 +8,7 @@ import CardDetails from "../Layouts/Outlets/CardDetails/CardDetails";
 import Blogs from "../Layouts/Outlets/Blogs/Blogs";
 import Private from "../Layouts/Outlets/Private/Private";
 import MyReviews from "../Layouts/Outlets/MyReviews/MyReviews";
+import AddCategory from "../Layouts/Outlets/AddCategory/AddCategory";
 
 export const routes = createBrowserRouter([
   {
@@ -57,6 +58,14 @@ export const routes = createBrowserRouter([
         element: (
           <Private>
             <MyReviews></MyReviews>
+          </Private>
+        ),
+      },
+      {
+        path: "/private/addCategory",
+        element: (
+          <Private>
+            <AddCategory></AddCategory>
           </Private>
         ),
       },

@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";
 
-const GiveReview = ({ card_id }) => {
+const GiveReview = ({ card_id, card_name}) => {
   const { user } = useContext(AuthContext);
 
   const [review, setReviews] = useState({});
@@ -30,16 +30,17 @@ const GiveReview = ({ card_id }) => {
     const userName = user.displayName;
     const userImage = user.photoURL;
     const cardId = card_id;
+    const cardName = card_name;
     const field = event.target.name;
     const value = event.target.value;
-    const newReview = { ...review, userId, userName, userImage, cardId, date };
+    const newReview = { ...review, userId, userName, userImage, cardId, cardName, date };
     newReview[field] = value;
     setReviews(newReview);
   };
   return (
     <div>
       {user?.uid ? (
-        <>
+        <> 
           <div className="m-10 pr-52 flex items-center ">
             <form onSubmit={handleReviews} className="w-full ">
               <input
