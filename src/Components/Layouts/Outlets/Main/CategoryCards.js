@@ -9,6 +9,7 @@ const CategoryCards = ({ category }) => {
       <p className="text-2xl text-justify p-5 text-black">
         {category.details.slice(0, 100) + "..."}
       </p>
+      <p className="p-5 text-2xl border-2 text-gray-900 bg-gradient-to-r from-lime-300 via-lime-600 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg px-5 py-2.5 text-center ">Price: <span className="text-red-600">{category.price} </span>tk / month</p>
       <div>
         <Link to={`/category/${category._id}`}>
           <button className="text-2xl py-10 rounded bg-blue-800 text-white text-center flex justify-center items-center w-full">
