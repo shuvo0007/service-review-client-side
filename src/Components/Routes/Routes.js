@@ -6,6 +6,8 @@ import Login from "../Layouts/Outlets/Login/Login";
 import Registration from "../Layouts/Outlets/Registration/Registration";
 import CardDetails from "../Layouts/Outlets/CardDetails/CardDetails";
 import Blogs from "../Layouts/Outlets/Blogs/Blogs";
+import Private from "../Layouts/Outlets/Private/Private";
+import MyReviews from "../Layouts/Outlets/MyReviews/MyReviews";
 
 export const routes = createBrowserRouter([
   {
@@ -39,6 +41,24 @@ export const routes = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/private/:id",
+        element: (
+          <Private>
+            <CardDetails></CardDetails>
+          </Private>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/category/${params.id}`),
+      },
+      {
+        path: "/private/myReviews",
+        element: (
+          <Private>
+            <MyReviews></MyReviews>
+          </Private>
+        ),
       },
     ],
   },

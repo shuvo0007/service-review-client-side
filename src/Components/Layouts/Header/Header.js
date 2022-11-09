@@ -63,14 +63,14 @@ const Header = () => {
               <div className="flex items-center">
                 <ul className="flex ">
                   <li>
-                    <Link to={"/reviews"}>
+                    <Link to={"/private/myReviews"}>
                       <button className="text-white bg-orange-600 hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-lg hover:rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 m-3 transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110  duration-100">
                         My reviews
                       </button>
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/addCategory"}>
+                    <Link to={"/private/addCategory"}>
                       <button className="text-white bg-orange-600 hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-lg hover:rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 m-3 transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110  duration-100">
                         Add Category
                       </button>
