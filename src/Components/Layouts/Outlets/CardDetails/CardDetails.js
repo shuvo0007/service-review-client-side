@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../../../../Hooks/useTitle";
 import GiveReview from "./GiveReview";
@@ -7,9 +7,12 @@ import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const CardDetails = () => {
-
-
-  
+  const [allReviews, setAllReviews] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/reviews")
+      .then((res) => res.json())
+      .then((data) => setAllReviews(data));
+  }, []);
   const card = useLoaderData();
   useTitle("Details");
   return (
@@ -30,9 +33,18 @@ const CardDetails = () => {
           <button></button>
         </div>
       </div>
-
       <GiveReview card_id={card._id}></GiveReview>
-      <ShowReviews></ShowReviews>
+
+      {allReviews
+        .slice()
+        .reverse()
+        .map((review) => (
+          <ShowReviews
+            key={review._id}
+            review={review}
+            cardID={card._id}
+          ></ShowReviews>
+        ))}
     </div>
   );
 };
