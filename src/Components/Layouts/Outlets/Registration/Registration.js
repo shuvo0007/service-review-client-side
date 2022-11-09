@@ -1,9 +1,11 @@
 import React from "react";
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useTitle from "../../../../Hooks/useTitle";
 import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";
 
 const Registration = () => {
+  useTitle("Registration");
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
