@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
+import useTitle from "../../../../Hooks/useTitle";
 
 const AddCategory = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  useTitle("AddCategory");
+  return <div></div>;
 };
 
 export default AddCategory;
