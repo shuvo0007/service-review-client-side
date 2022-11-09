@@ -5,6 +5,7 @@ import Main from "../Layouts/Outlets/Main/Main";
 import Login from "../Layouts/Outlets/Login/Login";
 import Registration from "../Layouts/Outlets/Registration/Registration";
 import CardDetails from "../Layouts/Outlets/CardDetails/CardDetails";
+import Blogs from "../Layouts/Outlets/Blogs/Blogs";
 
 export const routes = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ export const routes = createBrowserRouter([
         element: <CardDetails></CardDetails>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/category/${params.id}`),
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
       },
     ],
   },

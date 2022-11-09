@@ -47,6 +47,13 @@ const Header = () => {
                       </button>
                     </Link>
                   </li>
+                  <li>
+                    <Link to={"/blogs"}>
+                      <button className="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-lg hover:rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-6 transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110  duration-100">
+                        Blogs
+                      </button>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
