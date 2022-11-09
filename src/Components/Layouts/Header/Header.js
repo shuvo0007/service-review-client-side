@@ -84,7 +84,7 @@ const Header = () => {
                     alt=""
                   />
                 ) : (
-                  <div className="border-2 rounded-full p-3 text-white">
+                  <div className="border-2 rounded-full w-16 h-16 p-3 text-white">
                     <FaRegUser size={30}></FaRegUser>
                   </div>
                 )}
