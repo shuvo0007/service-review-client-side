@@ -5,7 +5,7 @@ const ShowReviews = ({ review, cardID }) => {
     <div className="text-white flex">
       {review.cardId == cardID ? (
         <>
-          <div className="border-2 m-5 flex w-full p-10">
+          <div className="border-2 m-5 flex w-full p-10 rounded-xl">
             <div className="mr-10">
               <img
                 className="rounded-full w-32"
@@ -20,7 +20,7 @@ const ShowReviews = ({ review, cardID }) => {
                   {review.date.slice(0, 10)} | {review.date.slice(11, 19)}
                 </p>
               </div>
-              <div className="border-2 p-5 text-3xl">
+              <div className="border-2 p-5 text-3xl rounded-xl">
                 <p className="">Reviews:</p>
                 <p>{review.review}</p>
               </div>

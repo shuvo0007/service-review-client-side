@@ -77,7 +77,7 @@ const Header = () => {
                     </Link>
                   </li>
                 </ul>
-                {user.photoURL ? (
+                {user?.photoURL ? (
                   <img
                     className="rounded-full w-16"
                     src={user.photoURL}
