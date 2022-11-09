@@ -43,9 +43,9 @@ const AddCategory = () => {
           <input
             onBlur={handleInputBlur}
             type="text"
-            name="title"
+            name="name"
             id="last_name"
-            className="bg-gray-50 border border-gray-300 text-white float-left text-sm rounded-lg 
+            className="bg-transparent border border-gray-300 text-white float-left text-sm rounded-lg 
                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             placeholder="Title of the Service"
             required
@@ -61,9 +61,9 @@ const AddCategory = () => {
           <input
             onBlur={handleInputBlur}
             type="text"
-            name="img"
+            name="image"
             id="company"
-            className="bg-gray-50 border border-gray-300 text-white float-left text-sm rounded-lg 
+            className="bg-transparent border border-gray-300 text-white float-left text-sm rounded-lg 
                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             placeholder="http://.....com/abcd.jpg .png"
             required
@@ -81,7 +81,7 @@ const AddCategory = () => {
             type="text"
             name="price"
             id="phone"
-            className="bg-gray-50 border border-gray-300 text-white float-left text-sm rounded-lg 
+            className="bg-transparent border border-gray-300 text-white float-left text-sm rounded-lg 
                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             placeholder="123.00"
             required
@@ -97,9 +97,9 @@ const AddCategory = () => {
           <input
             onBlur={handleInputBlur}
             type="text"
-            name="description"
+            name="details"
             id="website"
-            className="bg-gray-50 border border-gray-300 text-white float-left text-sm rounded-lg 
+            className="bg-transparent border border-gray-300 text-white float-left text-sm rounded-lg 
                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             placeholder="Write something about the service"
             required
@@ -108,7 +108,7 @@ const AddCategory = () => {
 
         <button
           type="submit"
-          className="text-white float-left bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit
         </button>
