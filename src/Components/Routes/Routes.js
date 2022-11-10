@@ -9,6 +9,7 @@ import Blogs from "../Layouts/Outlets/Blogs/Blogs";
 import Private from "../Layouts/Outlets/Private/Private";
 import MyReviews from "../Layouts/Outlets/MyReviews/MyReviews";
 import AddCategory from "../Layouts/Outlets/AddCategory/AddCategory";
+import EditReview from "../Layouts/Outlets/MyReviews/EditReview";
 
 export const routes = createBrowserRouter([
   {
@@ -68,6 +69,16 @@ export const routes = createBrowserRouter([
             <AddCategory></AddCategory>
           </Private>
         ),
+      },
+      {
+        path: "/private/update/:id",
+        element: (
+          <Private>
+            <EditReview></EditReview>
+          </Private>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/reviews/${params.id}`),
       },
     ],
   },

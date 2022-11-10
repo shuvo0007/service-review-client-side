@@ -1,6 +1,7 @@
 import React from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { TbEdit } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const ReviewCard = ({ user, reviews }) => {
   return (
@@ -15,9 +16,10 @@ const ReviewCard = ({ user, reviews }) => {
             Category: <span>{reviews.cardName}</span>
           </h2>
           <div className="float-right text-white flex">
-            <button>
-              <TbEdit size={40} />
-            </button>
+            <Link to={`/private/update/${reviews._id}`}>
+                <TbEdit size={40} />
+
+            </Link>
             <button>
               <MdDeleteForever size={40} />
             </button>
