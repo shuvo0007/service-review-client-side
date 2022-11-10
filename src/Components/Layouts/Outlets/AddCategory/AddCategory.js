@@ -94,7 +94,7 @@ const AddCategory = () => {
           </label>
           <input
             onBlur={handleInputBlur}
-            type="text"
+            type="number"
             name="price"
             id="phone"
             className="bg-transparent border border-gray-300 text-white float-left text-sm rounded-lg 

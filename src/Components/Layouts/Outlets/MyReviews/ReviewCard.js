@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { TbEdit } from "react-icons/tb";
 import { Link } from "react-router-dom";
@@ -6,10 +6,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ReviewCard = ({ user, reviews }) => {
-  const [reviewDisplay, setReviewDisplay] = useState(reviews);
-
-  const notify = () => toast("Wow so easy!");
-
   const handleDelete = (review) => {
     fetch(`http://localhost:5000/reviews/${reviews._id}`, {
       method: "DELETE",

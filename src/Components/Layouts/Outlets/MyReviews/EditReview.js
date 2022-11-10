@@ -42,13 +42,9 @@ const EditReview = () => {
 
   return (
     <div className="mx-52">
-      <h2 className="font-2 text-xl text-center my-5">
-        Your Previous Review:{" "}
-        <span className="text-gray-400">{storedReview.review}</span>
-      </h2>
       <form onSubmit={handleUpdateReview}>
-        <div className="mb-4 w-full bg-gray-50 rounded-lg border border-gray-300">
-          <div className="py-4 px-4 bg-gray-200 rounded-t-lg border-gray-900">
+        <div className="mb-4 w-full bg-transparent rounded-lg border border-gray-300">
+          <div className="py-4 px-4 bg-transparent rounded-t-lg border-gray-900">
             <textarea
               onChange={handleInputChange}
               defaultValue={storedReview.review}
@@ -56,7 +52,7 @@ const EditReview = () => {
               name="review"
               id="comment"
               rows="10"
-              className="font-2 w-full text-xl text-gray-600 bg-white border-0 p-2"
+              className="font-2 w-full text-xl text-white bg-transparent border-0 p-2"
               placeholder="Write a comment..."
               required
             ></textarea>
