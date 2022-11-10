@@ -2,19 +2,22 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";
 
-const GiveReview = ({ card_id, card_name}) => {
+const GiveReview = ({ card_id, card_name }) => {
   const { user } = useContext(AuthContext);
 
   const [review, setReviews] = useState({});
   const handleReviews = (event) => {
     event.preventDefault();
-    fetch("http://localhost:5000/reviews", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(review),
-    })
+    fetch(
+      "https://b6a11-service-review-server-side-shuvo0007.vercel.app/reviews",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(review),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -33,14 +36,22 @@ const GiveReview = ({ card_id, card_name}) => {
     const cardName = card_name;
     const field = event.target.name;
     const value = event.target.value;
-    const newReview = { ...review, userId, userName, userImage, cardId, cardName, date };
+    const newReview = {
+      ...review,
+      userId,
+      userName,
+      userImage,
+      cardId,
+      cardName,
+      date,
+    };
     newReview[field] = value;
     setReviews(newReview);
   };
   return (
     <div>
       {user?.uid ? (
-        <> 
+        <>
           <div className="m-10 pr-52 flex items-center ">
             <form onSubmit={handleReviews} className="w-full ">
               <input

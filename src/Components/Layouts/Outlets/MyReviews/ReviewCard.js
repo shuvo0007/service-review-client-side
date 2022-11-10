@@ -7,9 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 const ReviewCard = ({ user, reviews }) => {
   const handleDelete = (review) => {
-    fetch(`http://localhost:5000/reviews/${reviews._id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://b6a11-service-review-server-side-shuvo0007.vercel.app/reviews/${reviews._id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {

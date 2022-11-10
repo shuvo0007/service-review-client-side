@@ -15,13 +15,16 @@ const AddCategory = () => {
   const handleAddService = (event) => {
     event.preventDefault();
 
-    fetch("http://localhost:5000/category", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(category),
-    })
+    fetch(
+      "https://b6a11-service-review-server-side-shuvo0007.vercel.app/category",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(category),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setTimeout(() => navigate(from, { replace: true }), 3000);

@@ -9,7 +9,9 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 const CardDetails = () => {
   const [allReviews, setAllReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch(
+      "https://b6a11-service-review-server-side-shuvo0007.vercel.app/reviews"
+    )
       .then((res) => res.json())
       .then((data) => setAllReviews(data));
   }, []);

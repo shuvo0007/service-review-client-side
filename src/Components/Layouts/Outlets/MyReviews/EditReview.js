@@ -15,13 +15,16 @@ const EditReview = () => {
   const handleUpdateReview = (event) => {
     event.preventDefault();
     // console.log(user);
-    fetch(`http://localhost:5000/reviews/${storedReview._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(review),
-    })
+    fetch(
+      `https://b6a11-service-review-server-side-shuvo0007.vercel.app/reviews/${storedReview._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(review),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

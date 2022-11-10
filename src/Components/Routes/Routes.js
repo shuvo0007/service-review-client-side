@@ -19,12 +19,18 @@ export const routes = createBrowserRouter([
       {
         path: "/",
         element: <Main></Main>,
-        loader: () => fetch(`http://localhost:5000/category`),
+        loader: () =>
+          fetch(
+            `https://b6a11-service-review-server-side-shuvo0007.vercel.app/category`
+          ),
       },
       {
         path: "/allCategories",
         element: <AllCategories></AllCategories>,
-        loader: () => fetch(`http://localhost:5000/category`),
+        loader: () =>
+          fetch(
+            `https://b6a11-service-review-server-side-shuvo0007.vercel.app/category`
+          ),
       },
       {
         path: "/login",
@@ -38,7 +44,9 @@ export const routes = createBrowserRouter([
         path: "/category/:id",
         element: <CardDetails></CardDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(
+            `https://b6a11-service-review-server-side-shuvo0007.vercel.app/category/${params.id}`
+          ),
       },
       {
         path: "/blogs",
@@ -52,7 +60,9 @@ export const routes = createBrowserRouter([
           </Private>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(
+            `https://b6a11-service-review-server-side-shuvo0007.vercel.app/category/${params.id}`
+          ),
       },
       {
         path: "/private/myReviews",
@@ -78,7 +88,9 @@ export const routes = createBrowserRouter([
           </Private>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/reviews/${params.id}`),
+          fetch(
+            `https://b6a11-service-review-server-side-shuvo0007.vercel.app/reviews/${params.id}`
+          ),
       },
     ],
   },
