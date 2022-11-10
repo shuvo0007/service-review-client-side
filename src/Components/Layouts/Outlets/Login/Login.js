@@ -8,6 +8,11 @@ import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";
 
 const Login = () => {
   useTitle("LogIN");
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   const [error, setError] = useState("");
   const { providerLogin, signIn } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
@@ -19,10 +24,6 @@ const Login = () => {
       })
       .catch((error) => console.error(error));
   };
-
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (event) => {
     event.preventDefault();
