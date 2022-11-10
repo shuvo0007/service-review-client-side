@@ -6,7 +6,7 @@ import Header from "../../Header/Header";
 const Home = () => {
 
   return (
-    <div>
+    <div className="flex flex-col">
       <Header></Header>
       <hr />
       <Outlet></Outlet>
