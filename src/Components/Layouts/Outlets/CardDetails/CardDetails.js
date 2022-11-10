@@ -20,7 +20,16 @@ const CardDetails = () => {
       <div className="flex m-10 p-5 border-2 rounded-lg">
         <PhotoProvider>
           <PhotoView key={card._id} src={card.image}>
-            <img src={card.image} alt="" className="h-96" />
+            <img
+              src={card.image}
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null;
+                currentTarget.src =
+                  "https://media.istockphoto.com/id/628925698/vector/pile-of-hardcover-books.jpg?s=612x612&w=0&k=20&c=UskxzCZAQ4LXrgMhgW3M8Q5jdtWFPZ8WxwosF6h6euI=";
+              }}
+              alt=""
+              className="w-96"
+            />
           </PhotoView>
         </PhotoProvider>
 
@@ -32,7 +41,7 @@ const CardDetails = () => {
           </p>
         </div>
       </div>
-      <GiveReview card_id={card._id} card_name={card.name}></GiveReview> 
+      <GiveReview card_id={card._id} card_name={card.name}></GiveReview>
 
       {allReviews
         .slice()
