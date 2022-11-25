@@ -5,7 +5,7 @@ import useTitle from "../../../../Hooks/useTitle";
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";
-
+ 
 const Login = () => {
   useTitle("LogIN");
 
