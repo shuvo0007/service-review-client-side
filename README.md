@@ -1,8 +1,8 @@
 Project Name: TutionBD
 
-Client-side code github repository: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-shuvo0007
+Client-side code github repository: https://github.com/shuvo0007/service-review-client-side
 
-Server-side code github repository: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-shuvo0007
+Server-side code github repository: https://github.com/shuvo0007/service-review-server-side
 
 Live website link: https://tution-bd.web.app/
 
